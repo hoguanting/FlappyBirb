@@ -99,3 +99,15 @@ svg rect {
     font-weight: bolder;
     text-align: center;
 }
+
+#paused {
+    font-size: 1.5em;
+    font-weight: bolder;
+    text-align: center;
+}
+
+#winner {
+    font-size: 1.5em;
+    font-weight: bolder;
+    text-align: center;
+}
