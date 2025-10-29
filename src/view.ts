@@ -29,8 +29,13 @@ export const render = (): ((s: State) => void) => {
         `0 0 ${Viewport.CANVAS_WIDTH} ${Viewport.CANVAS_HEIGHT}`,
     );
 
+    const birdSpriteUrl =
+        (typeof import.meta !== "undefined" && import.meta.env?.BASE_URL
+            ? `${import.meta.env.BASE_URL}birb.png`
+            : "birb.png");
+
     const birdImg = createSvgElement(svg.namespaceURI, "image", {
-        href: "assets/birb.png",
+        href: birdSpriteUrl,
         x: `${Viewport.CANVAS_WIDTH * 0.3 - Birb.WIDTH / 2}`,
         y: `${Viewport.CANVAS_HEIGHT / 2 - Birb.HEIGHT / 2}`,
         width: `${Birb.WIDTH}`,
@@ -45,7 +50,7 @@ export const render = (): ((s: State) => void) => {
             .filter(g => g.active && g.y != null)
             .forEach(g => {
                 const gImg = createSvgElement(svg.namespaceURI, "image", {
-                    href: "assets/birb.png",
+                    href: birdSpriteUrl,
                     x: `${Viewport.CANVAS_WIDTH * 0.3 - Birb.WIDTH / 2}`,
                     y: `${(g.y as number) - Birb.HEIGHT / 2}`,
                     width: `${Birb.WIDTH}`,
