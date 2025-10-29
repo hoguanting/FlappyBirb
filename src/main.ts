@@ -26,9 +26,7 @@ export { state$ } from "./observable";
 // The following simply runs your main function on window load.  Make sure to leave it in place.
 // You should not need to change this, beware if you are.
 if (typeof window !== "undefined") {
-    const { protocol, hostname, port } = new URL(import.meta.url);
-    const baseUrl = `${protocol}//${hostname}${port ? `:${port}` : ""}`;
-    const csvUrl = `${baseUrl}/assets/map.csv`;
+    const csvUrl = `${import.meta.env.BASE_URL}map.csv`;
 
     // Get the file from URL
     const csv$ = fromFetch(csvUrl).pipe(
