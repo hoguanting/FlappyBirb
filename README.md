@@ -6,6 +6,9 @@ The core logic avoids mutation and side effects, managing the game's state throu
 
 -----
 
+https://github.com/user-attachments/assets/a321050f-23ec-431b-af8d-a2d884d8c91a
+
+
 ## 🚀 Live Demo
 
 You can play the game live on Vercel: **[https://flappy-birb.vercel.app/](https://flappy-birb.vercel.app/)**
